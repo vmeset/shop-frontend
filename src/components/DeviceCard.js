@@ -41,7 +41,9 @@ const DeviceCard = observer( ({item}) => {
                         onClick={e => e.stopPropagation()}
                     >
                         <Button size="small" sx={{ml: 5}} onClick={() => device.setToOrder(item)}>Buy</Button>
-                        <Button disabled size="small">{item.price}$</Button>
+                        <Button disabled size="small">
+                            {item.price}$
+                        </Button>
                     </Stack>
                 </CardActions>
             </Card>
