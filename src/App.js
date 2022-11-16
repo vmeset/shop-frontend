@@ -9,6 +9,7 @@ import { check } from './http/userAPI';
 import CircularProgress from '@mui/material/CircularProgress';
 import { ThemeProvider, createTheme, Box } from '@mui/material';
 import Basket from './components/Basket/Basket';
+import Footer from './components/Footer';
 // import { fetchBrands, fetchDevices, fetchTypes } from './http/deviceAPI';
 
 const App = observer ( () => {
@@ -57,6 +58,7 @@ const App = observer ( () => {
           <NavBar mode={mode} setMode={setMode} handleCart={() => setIsCartOpen(true)} />
           <AppRouter />
           <Basket cartOpen={isCartOpen} closeCart={() => setIsCartOpen(false)} order={order} />
+          <Footer mode={mode} setMode={setMode} />
         </Box>
       </ThemeProvider>
     </BrowserRouter>

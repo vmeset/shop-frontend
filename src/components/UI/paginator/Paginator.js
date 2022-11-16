@@ -15,7 +15,7 @@ const Paginator = observer( () => {
     };
 
     return (
-        <Stack spacing={2} sx={{mt: 2}}>
+        <Stack spacing={2} sx={{mt: 2, mb: 2}}>
             {!!pagesCount ?
                 <Pagination count={pagesCount} page={device.page} onChange={handleChange} />
                 :

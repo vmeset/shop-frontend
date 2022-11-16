@@ -38,6 +38,23 @@ const TypeBar = observer( () => {
                     </ListItem>
                 )}
                 <Divider />
+                <ListItem 
+                    size='small'
+                    // onClick={() => device.setSelectedBrand('')}
+                    sx={{p: 0}}
+                >
+                    <ListItemButton
+                            onClick={() => {
+                                device.setSelectedType('')
+                                console.log(device.selectedType)
+                            }}
+                        >
+                            <ListItemText  
+                                primary={'select all'}
+
+                            />
+                        </ListItemButton>
+                </ListItem>
             </List>
         </Box>
     );
