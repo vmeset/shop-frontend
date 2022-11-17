@@ -29,7 +29,10 @@ const TypeBar = observer( () => {
                         selected={type._id === device.selectedType._id ? true : false}
                     >
                         <ListItemButton
-                            onClick={() => device.setSelectedType(type)}
+                            onClick={() => {
+                                device.setSelectedType(type)
+                                device.setPage(1)
+                            }}
                         >
                             <ListItemText  
                                 primary={type.name}
@@ -40,18 +43,17 @@ const TypeBar = observer( () => {
                 <Divider />
                 <ListItem 
                     size='small'
-                    // onClick={() => device.setSelectedBrand('')}
+                    selected={!device.selectedType._id}
                     sx={{p: 0}}
                 >
                     <ListItemButton
                             onClick={() => {
                                 device.setSelectedType('')
-                                console.log(device.selectedType)
+                                device.setPage(1)
                             }}
                         >
                             <ListItemText  
                                 primary={'select all'}
-
                             />
                         </ListItemButton>
                 </ListItem>

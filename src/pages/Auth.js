@@ -53,7 +53,9 @@ const Auth = observer( () => {
   }
 
     return (
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="xs"
+        sx={{height: '73vh'}}
+      >
         <CssBaseline />
         <Box
           sx={{

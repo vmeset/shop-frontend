@@ -42,13 +42,7 @@ const App = observer ( () => {
   return (
     <BrowserRouter>
       <ThemeProvider theme={darkTheme}>
-        <Box bgcolor={'background.default'} color={'text.primary'}
-          sx={{
-            p: 0,
-            m: 0,
-            boxSizing: 'border-box'
-          }}
-        >
+        <Box bgcolor={'background.default'} color={'text.primary'}>
           <NavBar mode={mode} setMode={setMode} handleCart={() => setIsCartOpen(true)} />
           <AppRouter />
           <Basket cartOpen={isCartOpen} closeCart={() => setIsCartOpen(false)} />

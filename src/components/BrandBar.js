@@ -22,7 +22,10 @@ const BrandBar = observer( () => {
                     color={!device.selectedBrand._id ? "primary" : 'inherit'}
                     size='small'
                     variant={!device.selectedBrand._id ? "contained" : 'outlined'}
-                    onClick={() => device.setSelectedBrand('')}
+                    onClick={() => {
+                        device.setSelectedBrand('')
+                        device.setPage(1)
+                    }}
                 >
                     ALL
                 </Button>
@@ -32,7 +35,10 @@ const BrandBar = observer( () => {
                         size='small'
                         variant={brand._id === device.selectedBrand._id ? "contained" : 'outlined'} 
                         key={brand._id}
-                        onClick={() => device.setSelectedBrand(brand)}
+                        onClick={() => {
+                            device.setSelectedBrand(brand)
+                            device.setPage(1)
+                        }}
                     >
                         {brand.name}
                     </Button>
